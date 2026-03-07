@@ -6,10 +6,12 @@
 }
 
 :root {
-    /* Färgpalett baserad på dina bilder */
+    /* Färgpalett baserad på dina bilder + havsgrön accent */
     --deep-green: #2d4a3e;
     --forest-green: #3d5a4a;
     --moss-green: #5a7265;
+    --sea-green: #5a9d96;        /* NYTT - Havsgrön/Turkos accent */
+    --soft-turquoise: #7db9b0;   /* NYTT - Mjukare turkos */
     --earth-brown: #6b5b4f;
     --warm-brown: #8b7355;
     --cream: #f5f1e8;
@@ -19,10 +21,10 @@
     --dark: #1a1a1a;
     --white: #ffffff;
     
-    /* Typsnitt */
+    /* Typsnitt - Jugendstil/Art Nouveau */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-display: 'Playfair Display', Georgia, serif;
-    --script: 'Cormorant Garamond', cursive;
+    --font-display: 'Pinyon Script', cursive;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
 }
 
 html {
@@ -30,7 +32,7 @@ html {
 }
 
 body {
-    font-family: var(--font-serif);
+    font-family: var(--font-body);
     font-size: 18px;
     line-height: 1.8;
     color: var(--dark);
@@ -47,13 +49,13 @@ h1, h2, h3, h4 {
 }
 
 .script-font {
-    font-family: var(--script);
-    font-style: italic;
-    font-size: 1.3em;
+    font-family: var(--font-display);
+    font-style: normal;
+    font-size: 1.5em;
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: 3.5rem;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--deep-green);
@@ -67,7 +69,7 @@ h1, h2, h3, h4 {
     bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--gold);
+    color: var(--sea-green);
     font-size: 1.5rem;
 }
 
@@ -96,7 +98,7 @@ h1, h2, h3, h4 {
 
 .nav-brand {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: var(--cream);
     font-weight: 400;
     letter-spacing: 1px;
@@ -110,10 +112,12 @@ h1, h2, h3, h4 {
 .nav-links a {
     color: var(--cream);
     text-decoration: none;
-    font-family: var(--font-display);
-    font-size: 1rem;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
     transition: color 0.3s ease;
     position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .nav-links a::after {
@@ -122,8 +126,8 @@ h1, h2, h3, h4 {
     bottom: -5px;
     left: 0;
     width: 0;
-    height: 1px;
-    background: var(--gold);
+    height: 2px;
+    background: var(--sea-green);
     transition: width 0.3s ease;
 }
 
@@ -132,7 +136,7 @@ h1, h2, h3, h4 {
 }
 
 .nav-links a:hover {
-    color: var(--gold);
+    color: var(--sea-green);
 }
 
 /* ===== HERO SECTION ===== */
@@ -141,16 +145,17 @@ h1, h2, h3, h4 {
     height: 100vh;
     background: linear-gradient(135deg, var(--deep-green) 0%, var(--forest-green) 100%);
     background-image: 
-        linear-gradient(rgba(45, 74, 62, 0.7), rgba(107, 91, 79, 0.6)),
+        linear-gradient(rgba(45, 74, 62, 0.4), rgba(107, 91, 79, 0.3)),
         url('nature2.jpg');
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero-overlay {
@@ -159,7 +164,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, transparent 0%, rgba(45, 74, 62, 0.4) 100%);
+    background: radial-gradient(circle at center, transparent 0%, rgba(45, 74, 62, 0.2) 100%);
 }
 
 .hero-content {
@@ -167,24 +172,26 @@ h1, h2, h3, h4 {
     z-index: 2;
     padding: 2rem;
     max-width: 900px;
+    margin-top: 10vh;
 }
 
 .hero-title {
-    font-size: 4.5rem;
+    font-size: 5rem;
     color: var(--cream);
     margin-bottom: 1rem;
     font-weight: 400;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
     animation: fadeInUp 1.5s ease;
 }
 
 .hero-subtitle {
     font-size: 1.8rem;
-    color: var(--light-beige);
+    color: var(--soft-turquoise);
     margin-bottom: 3rem;
     font-style: italic;
     font-weight: 300;
+    font-family: var(--font-body);
     animation: fadeInUp 1.5s ease 0.3s both;
 }
 
@@ -192,22 +199,23 @@ h1, h2, h3, h4 {
     display: inline-block;
     padding: 1rem 3rem;
     background: transparent;
-    border: 2px solid var(--gold);
+    border: 2px solid var(--sea-green);
     color: var(--cream);
     text-decoration: none;
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 1.1rem;
     letter-spacing: 2px;
     transition: all 0.4s ease;
     cursor: pointer;
     animation: fadeInUp 1.5s ease 0.6s both;
+    text-transform: uppercase;
 }
 
 .cta-button:hover {
-    background: var(--gold);
+    background: var(--sea-green);
     color: var(--deep-green);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(184, 168, 138, 0.3);
+    box-shadow: 0 10px 30px rgba(90, 157, 150, 0.4);
 }
 
 /* ===== OM MIG SECTION ===== */
@@ -237,7 +245,7 @@ h1, h2, h3, h4 {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    filter: sepia(20%) saturate(0.8);
+    filter: sepia(10%) saturate(0.9);
 }
 
 .image-decoration {
@@ -246,7 +254,7 @@ h1, h2, h3, h4 {
     left: -20px;
     right: 20px;
     bottom: 20px;
-    border: 2px solid var(--gold);
+    border: 2px solid var(--sea-green);
     border-radius: 5px;
     z-index: -1;
     opacity: 0.5;
@@ -262,7 +270,7 @@ h1, h2, h3, h4 {
     color: var(--forest-green);
     margin-bottom: 2rem;
     line-height: 1.6;
-    border-left: 3px solid var(--gold);
+    border-left: 3px solid var(--sea-green);
     padding-left: 1.5rem;
 }
 
@@ -281,7 +289,7 @@ h1, h2, h3, h4 {
 .studio-section {
     position: relative;
     padding: 8rem 2rem;
-    background: var(--deep-green);
+    background: linear-gradient(135deg, var(--deep-green) 0%, var(--sea-green) 100%);
     overflow: hidden;
 }
 
@@ -291,7 +299,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.15;
+    opacity: 0.25;
 }
 
 .nature-background img {
@@ -327,7 +335,7 @@ h1, h2, h3, h4 {
     background: rgba(245, 241, 232, 0.1);
     backdrop-filter: blur(10px);
     padding: 3rem 2rem;
-    border: 1px solid rgba(184, 168, 138, 0.3);
+    border: 1px solid rgba(90, 157, 150, 0.4);
     border-radius: 5px;
     transition: all 0.4s ease;
 }
@@ -335,12 +343,13 @@ h1, h2, h3, h4 {
 .service-card:hover {
     background: rgba(245, 241, 232, 0.2);
     transform: translateY(-10px);
-    border-color: var(--gold);
+    border-color: var(--sea-green);
+    box-shadow: 0 10px 40px rgba(90, 157, 150, 0.2);
 }
 
 .service-card h3 {
     color: var(--cream);
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
     font-family: var(--font-display);
 }
@@ -380,6 +389,7 @@ h1, h2, h3, h4 {
     padding: 3rem;
     border-radius: 5px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid var(--sea-green);
 }
 
 .form-group {
@@ -390,9 +400,10 @@ h1, h2, h3, h4 {
     display: block;
     margin-bottom: 0.5rem;
     color: var(--deep-green);
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 1rem;
     letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .form-group input,
@@ -401,7 +412,7 @@ h1, h2, h3, h4 {
     padding: 1rem;
     border: 1px solid var(--light-beige);
     background: var(--cream);
-    font-family: var(--font-serif);
+    font-family: var(--font-body);
     font-size: 1rem;
     color: var(--dark);
     border-radius: 3px;
@@ -411,8 +422,9 @@ h1, h2, h3, h4 {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--gold);
+    border-color: var(--sea-green);
     background: var(--white);
+    box-shadow: 0 0 10px rgba(90, 157, 150, 0.1);
 }
 
 .form-group textarea {
@@ -423,21 +435,22 @@ h1, h2, h3, h4 {
 .submit-button {
     width: 100%;
     padding: 1.2rem;
-    background: var(--deep-green);
-    color: var(--cream);
+    background: var(--sea-green);
+    color: var(--white);
     border: none;
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-size: 1.1rem;
     letter-spacing: 2px;
     cursor: pointer;
     border-radius: 3px;
     transition: all 0.4s ease;
+    text-transform: uppercase;
 }
 
 .submit-button:hover {
-    background: var(--forest-green);
+    background: var(--soft-turquoise);
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(45, 74, 62, 0.3);
+    box-shadow: 0 5px 20px rgba(90, 157, 150, 0.4);
 }
 
 .contact-info {
@@ -451,12 +464,12 @@ h1, h2, h3, h4 {
     padding: 2.5rem;
     border-radius: 5px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid var(--gold);
+    border-left: 4px solid var(--sea-green);
 }
 
 .info-card h3 {
     color: var(--deep-green);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 1.5rem;
     font-family: var(--font-display);
 }
@@ -467,13 +480,13 @@ h1, h2, h3, h4 {
 }
 
 .info-card a {
-    color: var(--forest-green);
+    color: var(--sea-green);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .info-card a:hover {
-    color: var(--gold);
+    color: var(--soft-turquoise);
 }
 
 .social-links {
@@ -486,21 +499,24 @@ h1, h2, h3, h4 {
 .social-link {
     color: var(--deep-green);
     text-decoration: none;
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     padding: 0.8rem 1.5rem;
-    border: 1px solid var(--deep-green);
+    border: 1px solid var(--sea-green);
     border-radius: 30px;
     transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
 }
 
 .social-link:hover {
-    background: var(--deep-green);
-    color: var(--cream);
+    background: var(--sea-green);
+    color: var(--white);
 }
 
 /* ===== FOOTER ===== */
 .footer {
-    background: var(--deep-green);
+    background: linear-gradient(135deg, var(--deep-green) 0%, var(--sea-green) 100%);
     color: var(--light-beige);
     text-align: center;
     padding: 3rem 2rem;
@@ -512,7 +528,7 @@ h1, h2, h3, h4 {
 
 .footer-tagline {
     font-style: italic;
-    color: var(--gold);
+    color: var(--soft-turquoise);
     font-size: 0.95rem;
 }
 
@@ -541,7 +557,7 @@ h1, h2, h3, h4 {
     }
     
     .hero-title {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
     
     .hero-subtitle {
@@ -565,7 +581,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 600px) {
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
     
     .hero-subtitle {
