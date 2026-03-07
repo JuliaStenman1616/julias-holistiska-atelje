@@ -6,16 +6,16 @@
 }
 
 :root {
-    /* Färgpalett - Aprikos + Havsgrön/Turkos */
-    --deep-green: #2d4a3e;
-    --forest-green: #3d5a4a;
-    --sea-green: #5a9d96;
-    --soft-turquoise: #7db9b0;
-    --apricot: #e8b89d;           /* NYTT - Aprikos/Mjuk orange */
-    --soft-apricot: #f0c9b5;      /* NYTT - Ljusare aprikos */
-    --cream: #f5f1e8;
-    --light-beige: #e8e0d0;
-    --gold: #b8a88a;
+    /* Färgpalett - Klar havsgrön & Turkos (inspirerad av dina bilder) */
+    --emerald-green: #009b77;      /* Klar smaragdgrön */
+    --sea-green: #20c4b5;          /* Klar havsgrön/turkos */
+    --bright-turquoise: #40d8c9;   /* Ljus turkos */
+    --deep-teal: #007a6b;          /* Djupare teal */
+    --apricot: #ffb380;            /* Klar aprikos */
+    --soft-apricot: #ffc9a3;       /* Ljus aprikos */
+    --cream: #faf6ed;
+    --light-beige: #f0e8d8;
+    --gold: #c9b896;
     --dark: #1a1a1a;
     --white: #ffffff;
     
@@ -56,7 +56,7 @@ h1, h2, h3, h4 {
     font-size: 4rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--deep-green);
+    color: var(--emerald-green);
     position: relative;
     padding-bottom: 1rem;
 }
@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(45, 74, 62, 0.95);
+    background: rgba(0, 122, 107, 0.95);
     backdrop-filter: blur(10px);
     padding: 1.5rem 3rem;
     display: flex;
@@ -134,17 +134,14 @@ h1, h2, h3, h4 {
 }
 
 .nav-links a:hover {
-    color: var(--apricot);
+    color: var(--sea-green);
 }
 
-/* ===== HERO SECTION - NY DESIGN ===== */
+/* ===== HERO SECTION - REN DESIGN UTAN FILTER ===== */
 .hero {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(45, 74, 62, 0.85) 0%, rgba(90, 157, 150, 0.75) 100%);
-    background-image: 
-        linear-gradient(135deg, rgba(45, 74, 62, 0.7) 0%, rgba(90, 157, 150, 0.6) 100%),
-        url('nature2.jpg');
+    background-image: url('nature2.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -162,10 +159,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 50%, rgba(232, 184, 157, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(90, 157, 150, 0.2) 0%, transparent 50%);
-    pointer-events: none;
+    background: linear-gradient(135deg, rgba(0, 122, 107, 0.5) 0%, rgba(32, 196, 181, 0.4) 100%);
 }
 
 .hero-content {
@@ -173,49 +167,20 @@ h1, h2, h3, h4 {
     z-index: 2;
     padding: 4rem 2rem;
     max-width: 1000px;
-    background: rgba(245, 241, 232, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(232, 184, 157, 0.3);
-    border-radius: 10px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title {
-    font-size: 6rem;
-    color: var(--apricot);
+    font-size: 6.5rem;
+    color: var(--white);
     margin-bottom: 1.5rem;
     font-weight: 400;
     letter-spacing: 4px;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
     animation: fadeInUp 1.5s ease;
 }
 
-.hero-subtitle {
-    display: none;
-}
-
 .cta-button {
-    display: inline-block;
-    padding: 1.2rem 3.5rem;
-    background: transparent;
-    border: 2px solid var(--apricot);
-    color: var(--apricot);
-    text-decoration: none;
-    font-family: var(--font-body);
-    font-size: 1.1rem;
-    letter-spacing: 3px;
-    transition: all 0.4s ease;
-    cursor: pointer;
-    animation: fadeInUp 1.5s ease 0.6s both;
-    text-transform: uppercase;
-    margin-top: 1rem;
-}
-
-.cta-button:hover {
-    background: var(--apricot);
-    color: var(--deep-green);
-    transform: translateY(-3px);
-    box-shadow: 0 15px 40px rgba(232, 184, 157, 0.4);
+    display: none;
 }
 
 /* ===== OM MIG SECTION ===== */
@@ -245,7 +210,7 @@ h1, h2, h3, h4 {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    filter: sepia(10%) saturate(0.9);
+    filter: none;
 }
 
 .image-decoration {
@@ -257,7 +222,7 @@ h1, h2, h3, h4 {
     border: 2px solid var(--sea-green);
     border-radius: 5px;
     z-index: -1;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 .about-content {
@@ -267,7 +232,7 @@ h1, h2, h3, h4 {
 .intro-text {
     font-size: 1.4rem;
     font-style: italic;
-    color: var(--forest-green);
+    color: var(--deep-teal);
     margin-bottom: 2rem;
     line-height: 1.6;
     border-left: 3px solid var(--apricot);
@@ -282,14 +247,14 @@ h1, h2, h3, h4 {
 .signature {
     margin-top: 3rem;
     font-style: italic;
-    color: var(--earth-brown);
+    color: var(--deep-teal);
 }
 
 /* ===== ATELJÉ SECTION ===== */
 .studio-section {
     position: relative;
     padding: 8rem 2rem;
-    background: linear-gradient(135deg, var(--deep-green) 0%, var(--sea-green) 100%);
+    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--sea-green) 100%);
     overflow: hidden;
 }
 
@@ -299,13 +264,14 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.25;
+    opacity: 0.3;
 }
 
 .nature-background img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: none;
 }
 
 .studio-content {
@@ -332,19 +298,19 @@ h1, h2, h3, h4 {
 }
 
 .service-card {
-    background: rgba(245, 241, 232, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     padding: 3rem 2rem;
-    border: 1px solid rgba(232, 184, 157, 0.4);
+    border: 2px solid var(--sea-green);
     border-radius: 5px;
     transition: all 0.4s ease;
 }
 
 .service-card:hover {
-    background: rgba(245, 241, 232, 0.2);
+    background: rgba(255, 255, 255, 0.25);
     transform: translateY(-10px);
-    border-color: var(--apricot);
-    box-shadow: 0 15px 40px rgba(232, 184, 157, 0.2);
+    border-color: var(--bright-turquoise);
+    box-shadow: 0 15px 40px rgba(32, 196, 181, 0.4);
 }
 
 .service-card h3 {
@@ -355,7 +321,7 @@ h1, h2, h3, h4 {
 }
 
 .service-card p {
-    color: var(--light-beige);
+    color: var(--white);
     font-size: 1rem;
     line-height: 1.6;
 }
@@ -369,7 +335,7 @@ h1, h2, h3, h4 {
 .contact-intro {
     text-align: center;
     font-size: 1.3rem;
-    color: var(--forest-green);
+    color: var(--deep-teal);
     margin-bottom: 4rem;
     max-width: 600px;
     margin-left: auto;
@@ -399,7 +365,7 @@ h1, h2, h3, h4 {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--deep-green);
+    color: var(--deep-teal);
     font-family: var(--font-body);
     font-size: 1rem;
     letter-spacing: 1px;
@@ -424,7 +390,7 @@ h1, h2, h3, h4 {
     outline: none;
     border-color: var(--sea-green);
     background: var(--white);
-    box-shadow: 0 0 10px rgba(90, 157, 150, 0.1);
+    box-shadow: 0 0 10px rgba(32, 196, 181, 0.2);
 }
 
 .form-group textarea {
@@ -448,9 +414,9 @@ h1, h2, h3, h4 {
 }
 
 .submit-button:hover {
-    background: var(--soft-turquoise);
+    background: var(--bright-turquoise);
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(90, 157, 150, 0.4);
+    box-shadow: 0 5px 20px rgba(32, 196, 181, 0.5);
 }
 
 .contact-info {
@@ -468,7 +434,7 @@ h1, h2, h3, h4 {
 }
 
 .info-card h3 {
-    color: var(--deep-green);
+    color: var(--emerald-green);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
     font-family: var(--font-jugend);
@@ -476,7 +442,7 @@ h1, h2, h3, h4 {
 
 .info-card p {
     margin-bottom: 1rem;
-    color: var(--earth-brown);
+    color: var(--deep-teal);
 }
 
 .info-card a {
@@ -486,7 +452,7 @@ h1, h2, h3, h4 {
 }
 
 .info-card a:hover {
-    color: var(--soft-turquoise);
+    color: var(--bright-turquoise);
 }
 
 .social-links {
@@ -497,11 +463,11 @@ h1, h2, h3, h4 {
 }
 
 .social-link {
-    color: var(--deep-green);
+    color: var(--deep-teal);
     text-decoration: none;
     font-family: var(--font-body);
     padding: 0.8rem 1.5rem;
-    border: 1px solid var(--sea-green);
+    border: 2px solid var(--sea-green);
     border-radius: 30px;
     transition: all 0.3s ease;
     text-transform: uppercase;
@@ -516,8 +482,8 @@ h1, h2, h3, h4 {
 
 /* ===== FOOTER ===== */
 .footer {
-    background: linear-gradient(135deg, var(--deep-green) 0%, var(--sea-green) 100%);
-    color: var(--light-beige);
+    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--sea-green) 100%);
+    color: var(--white);
     text-align: center;
     padding: 3rem 2rem;
 }
