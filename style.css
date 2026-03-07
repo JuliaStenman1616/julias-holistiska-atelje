@@ -6,24 +6,22 @@
 }
 
 :root {
-    /* Färgpalett baserad på dina bilder + havsgrön accent */
+    /* Färgpalett - Aprikos + Havsgrön/Turkos */
     --deep-green: #2d4a3e;
     --forest-green: #3d5a4a;
-    --moss-green: #5a7265;
-    --sea-green: #5a9d96;        /* NYTT - Havsgrön/Turkos accent */
-    --soft-turquoise: #7db9b0;   /* NYTT - Mjukare turkos */
-    --earth-brown: #6b5b4f;
-    --warm-brown: #8b7355;
+    --sea-green: #5a9d96;
+    --soft-turquoise: #7db9b0;
+    --apricot: #e8b89d;           /* NYTT - Aprikos/Mjuk orange */
+    --soft-apricot: #f0c9b5;      /* NYTT - Ljusare aprikos */
     --cream: #f5f1e8;
     --light-beige: #e8e0d0;
-    --soft-purple: #9b8aa0;
     --gold: #b8a88a;
     --dark: #1a1a1a;
     --white: #ffffff;
     
-    /* Typsnitt - Jugendstil/Art Nouveau */
+    /* Typsnitt */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-display: 'Pinyon Script', cursive;
+    --font-jugend: 'Pinyon Script', cursive;
     --font-body: 'Cormorant Garamond', Georgia, serif;
 }
 
@@ -42,20 +40,20 @@ body {
 
 /* ===== TYPOGRAFI ===== */
 h1, h2, h3, h4 {
-    font-family: var(--font-display);
+    font-family: var(--font-jugend);
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 1.5rem;
 }
 
 .script-font {
-    font-family: var(--font-display);
+    font-family: var(--font-jugend);
     font-style: normal;
     font-size: 1.5em;
 }
 
 .section-title {
-    font-size: 3.5rem;
+    font-size: 4rem;
     text-align: center;
     margin-bottom: 3rem;
     color: var(--deep-green);
@@ -97,11 +95,11 @@ h1, h2, h3, h4 {
 }
 
 .nav-brand {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    color: var(--cream);
+    font-family: var(--font-jugend);
+    font-size: 2.2rem;
+    color: var(--apricot);
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 .nav-links {
@@ -136,86 +134,88 @@ h1, h2, h3, h4 {
 }
 
 .nav-links a:hover {
-    color: var(--sea-green);
+    color: var(--apricot);
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION - NY DESIGN ===== */
 .hero {
     position: relative;
-    height: 100vh;
-    background: linear-gradient(135deg, var(--deep-green) 0%, var(--forest-green) 100%);
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(45, 74, 62, 0.85) 0%, rgba(90, 157, 150, 0.75) 100%);
     background-image: 
-        linear-gradient(rgba(45, 74, 62, 0.4), rgba(107, 91, 79, 0.3)),
+        linear-gradient(135deg, rgba(45, 74, 62, 0.7) 0%, rgba(90, 157, 150, 0.6) 100%),
         url('nature2.jpg');
-    background-size: contain;
-    background-position: center top;
-    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: visible;
+    overflow: hidden;
 }
 
-.hero-overlay {
+.hero::before {
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(circle at center, transparent 0%, rgba(45, 74, 62, 0.2) 100%);
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(232, 184, 157, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(90, 157, 150, 0.2) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 2rem;
-    max-width: 900px;
-    margin-top: 10vh;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+    background: rgba(245, 241, 232, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(232, 184, 157, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .hero-title {
-    font-size: 5rem;
-    color: var(--cream);
-    margin-bottom: 1rem;
+    font-size: 6rem;
+    color: var(--apricot);
+    margin-bottom: 1.5rem;
     font-weight: 400;
-    letter-spacing: 3px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1.5s ease;
 }
 
 .hero-subtitle {
-    font-size: 1.8rem;
-    color: var(--soft-turquoise);
-    margin-bottom: 3rem;
-    font-style: italic;
-    font-weight: 300;
-    font-family: var(--font-body);
-    animation: fadeInUp 1.5s ease 0.3s both;
+    display: none;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1.2rem 3.5rem;
     background: transparent;
-    border: 2px solid var(--sea-green);
-    color: var(--cream);
+    border: 2px solid var(--apricot);
+    color: var(--apricot);
     text-decoration: none;
     font-family: var(--font-body);
     font-size: 1.1rem;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     transition: all 0.4s ease;
     cursor: pointer;
     animation: fadeInUp 1.5s ease 0.6s both;
     text-transform: uppercase;
+    margin-top: 1rem;
 }
 
 .cta-button:hover {
-    background: var(--sea-green);
+    background: var(--apricot);
     color: var(--deep-green);
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(90, 157, 150, 0.4);
+    box-shadow: 0 15px 40px rgba(232, 184, 157, 0.4);
 }
 
 /* ===== OM MIG SECTION ===== */
@@ -270,7 +270,7 @@ h1, h2, h3, h4 {
     color: var(--forest-green);
     margin-bottom: 2rem;
     line-height: 1.6;
-    border-left: 3px solid var(--sea-green);
+    border-left: 3px solid var(--apricot);
     padding-left: 1.5rem;
 }
 
@@ -318,7 +318,7 @@ h1, h2, h3, h4 {
 
 .studio-intro {
     font-size: 1.5rem;
-    color: var(--light-beige);
+    color: var(--soft-apricot);
     margin-bottom: 4rem;
     font-style: italic;
     line-height: 1.6;
@@ -335,7 +335,7 @@ h1, h2, h3, h4 {
     background: rgba(245, 241, 232, 0.1);
     backdrop-filter: blur(10px);
     padding: 3rem 2rem;
-    border: 1px solid rgba(90, 157, 150, 0.4);
+    border: 1px solid rgba(232, 184, 157, 0.4);
     border-radius: 5px;
     transition: all 0.4s ease;
 }
@@ -343,15 +343,15 @@ h1, h2, h3, h4 {
 .service-card:hover {
     background: rgba(245, 241, 232, 0.2);
     transform: translateY(-10px);
-    border-color: var(--sea-green);
-    box-shadow: 0 10px 40px rgba(90, 157, 150, 0.2);
+    border-color: var(--apricot);
+    box-shadow: 0 15px 40px rgba(232, 184, 157, 0.2);
 }
 
 .service-card h3 {
-    color: var(--cream);
-    font-size: 2rem;
+    color: var(--apricot);
+    font-size: 2.2rem;
     margin-bottom: 1rem;
-    font-family: var(--font-display);
+    font-family: var(--font-jugend);
 }
 
 .service-card p {
@@ -471,7 +471,7 @@ h1, h2, h3, h4 {
     color: var(--deep-green);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    font-family: var(--font-display);
+    font-family: var(--font-jugend);
 }
 
 .info-card p {
@@ -528,7 +528,7 @@ h1, h2, h3, h4 {
 
 .footer-tagline {
     font-style: italic;
-    color: var(--soft-turquoise);
+    color: var(--soft-apricot);
     font-size: 0.95rem;
 }
 
@@ -557,11 +557,7 @@ h1, h2, h3, h4 {
     }
     
     .hero-title {
-        font-size: 3.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.4rem;
+        font-size: 4rem;
     }
     
     .section-title {
@@ -581,11 +577,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 600px) {
     .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 3rem;
     }
     
     .section-title {
