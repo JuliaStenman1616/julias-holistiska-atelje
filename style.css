@@ -6,7 +6,7 @@
 }
 
 :root {
-    /* Färgpalett - Klar havsgrön & Turkos (inspirerad av dina bilder) */
+    /* Färgpalett - Klar havsgrön & Turkos */
     --emerald-green: #009b77;
     --sea-green: #20c4b5;
     --bright-turquoise: #40d8c9;
@@ -19,9 +19,9 @@
     --dark: #1a1a1a;
     --white: #ffffff;
     
-    /* Typsnitt */
+    /* Typsnitt - Mer lättläst men fortfarande elegant */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-jugend: 'Pinyon Script', cursive;
+    --font-jugend: 'Great Vibes', cursive;
     --font-body: 'Cormorant Garamond', Georgia, serif;
 }
 
@@ -96,7 +96,7 @@ h1, h2, h3, h4 {
 
 .nav-brand {
     font-family: var(--font-jugend);
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     color: var(--apricot);
     font-weight: 400;
     letter-spacing: 2px;
@@ -137,7 +137,7 @@ h1, h2, h3, h4 {
     color: var(--sea-green);
 }
 
-/* ===== HERO SECTION - REN DESIGN UTAN FILTER ===== */
+/* ===== HERO SECTION ===== */
 .hero {
     position: relative;
     min-height: 100vh;
