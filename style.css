@@ -7,12 +7,12 @@
 
 :root {
     /* Färgpalett - Klar havsgrön & Turkos (inspirerad av dina bilder) */
-    --emerald-green: #009b77;      /* Klar smaragdgrön */
-    --sea-green: #20c4b5;          /* Klar havsgrön/turkos */
-    --bright-turquoise: #40d8c9;   /* Ljus turkos */
-    --deep-teal: #007a6b;          /* Djupare teal */
-    --apricot: #ffb380;            /* Klar aprikos */
-    --soft-apricot: #ffc9a3;       /* Ljus aprikos */
+    --emerald-green: #009b77;
+    --sea-green: #20c4b5;
+    --bright-turquoise: #40d8c9;
+    --deep-teal: #007a6b;
+    --apricot: #ffb380;
+    --soft-apricot: #ffc9a3;
     --cream: #faf6ed;
     --light-beige: #f0e8d8;
     --gold: #c9b896;
@@ -72,7 +72,7 @@ h1, h2, h3, h4 {
 }
 
 .section-title.light {
-    color: var(--cream);
+    color: var(--apricot);
 }
 
 .section-title.light::after {
@@ -171,11 +171,11 @@ h1, h2, h3, h4 {
 
 .hero-title {
     font-size: 6.5rem;
-    color: var(--white);
+    color: var(--apricot);
     margin-bottom: 1.5rem;
     font-weight: 400;
     letter-spacing: 4px;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.6);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
     animation: fadeInUp 1.5s ease;
 }
 
@@ -298,7 +298,7 @@ h1, h2, h3, h4 {
 }
 
 .service-card {
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(250, 246, 237, 0.95);
     backdrop-filter: blur(10px);
     padding: 3rem 2rem;
     border: 2px solid var(--sea-green);
@@ -307,21 +307,22 @@ h1, h2, h3, h4 {
 }
 
 .service-card:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 1);
     transform: translateY(-10px);
     border-color: var(--bright-turquoise);
     box-shadow: 0 15px 40px rgba(32, 196, 181, 0.4);
 }
 
 .service-card h3 {
-    color: var(--apricot);
+    color: var(--dark);
     font-size: 2.2rem;
     margin-bottom: 1rem;
     font-family: var(--font-jugend);
+    font-weight: 600;
 }
 
 .service-card p {
-    color: var(--white);
+    color: var(--dark);
     font-size: 1rem;
     line-height: 1.6;
 }
