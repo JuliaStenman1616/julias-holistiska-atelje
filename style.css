@@ -6,22 +6,20 @@
 }
 
 :root {
-    /* Färgpalett - Klar havsgrön & Turkos */
-    --emerald-green: #009b77;
+    /* Färgpalett - Enhetlig havsgrön */
     --sea-green: #20c4b5;
-    --bright-turquoise: #40d8c9;
-    --deep-teal: #007a6b;
+    --deep-sea-green: #1a9a8f;
     --apricot: #ffb380;
     --soft-apricot: #ffc9a3;
     --cream: #faf6ed;
     --light-beige: #f0e8d8;
-    --gold: #c9b896;
+    --gold: #d4af37;
     --dark: #1a1a1a;
     --white: #ffffff;
     
-    /* Typsnitt - Mer lättläst men fortfarande elegant */
+    /* Typsnitt */
     --font-serif: 'Cormorant Garamond', Georgia, serif;
-    --font-jugend: 'Great Vibes', cursive;
+    --font-display: 'Cinzel', serif;
     --font-body: 'Cormorant Garamond', Georgia, serif;
 }
 
@@ -40,23 +38,25 @@ body {
 
 /* ===== TYPOGRAFI ===== */
 h1, h2, h3, h4 {
-    font-family: var(--font-jugend);
+    font-family: var(--font-display);
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
 }
 
 .script-font {
-    font-family: var(--font-jugend);
+    font-family: var(--font-display);
     font-style: normal;
     font-size: 1.5em;
 }
 
 .section-title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     text-align: center;
     margin-bottom: 3rem;
-    color: var(--emerald-green);
+    color: var(--deep-sea-green);
     position: relative;
     padding-bottom: 1rem;
 }
@@ -84,7 +84,7 @@ h1, h2, h3, h4 {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 122, 107, 0.95);
+    background: rgba(26, 154, 143, 0.95);
     backdrop-filter: blur(10px);
     padding: 1.5rem 3rem;
     display: flex;
@@ -95,11 +95,11 @@ h1, h2, h3, h4 {
 }
 
 .nav-brand {
-    font-family: var(--font-jugend);
-    font-size: 2.5rem;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
     color: var(--apricot);
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 .nav-links {
@@ -141,7 +141,7 @@ h1, h2, h3, h4 {
 .hero {
     position: relative;
     min-height: 100vh;
-    background-image: url('nature2.jpg');
+    background-image: url('hero1.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -159,7 +159,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(0, 122, 107, 0.5) 0%, rgba(32, 196, 181, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(255, 179, 128, 0.1) 100%);
 }
 
 .hero-content {
@@ -170,17 +170,13 @@ h1, h2, h3, h4 {
 }
 
 .hero-title {
-    font-size: 6.5rem;
-    color: var(--apricot);
+    font-size: 5rem;
+    color: var(--white);
     margin-bottom: 1.5rem;
     font-weight: 400;
-    letter-spacing: 4px;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
     animation: fadeInUp 1.5s ease;
-}
-
-.cta-button {
-    display: none;
 }
 
 /* ===== OM MIG SECTION ===== */
@@ -196,7 +192,7 @@ h1, h2, h3, h4 {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1.5fr 1fr;
     gap: 5rem;
     align-items: center;
 }
@@ -216,8 +212,8 @@ h1, h2, h3, h4 {
 .image-decoration {
     position: absolute;
     top: -20px;
-    left: -20px;
-    right: 20px;
+    left: 20px;
+    right: -20px;
     bottom: 20px;
     border: 2px solid var(--sea-green);
     border-radius: 5px;
@@ -232,7 +228,7 @@ h1, h2, h3, h4 {
 .intro-text {
     font-size: 1.4rem;
     font-style: italic;
-    color: var(--deep-teal);
+    color: var(--deep-sea-green);
     margin-bottom: 2rem;
     line-height: 1.6;
     border-left: 3px solid var(--apricot);
@@ -247,14 +243,14 @@ h1, h2, h3, h4 {
 .signature {
     margin-top: 3rem;
     font-style: italic;
-    color: var(--deep-teal);
+    color: var(--deep-sea-green);
 }
 
 /* ===== ATELJÉ SECTION ===== */
 .studio-section {
     position: relative;
     padding: 8rem 2rem;
-    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--sea-green) 100%);
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
     overflow: hidden;
 }
 
@@ -264,7 +260,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.3;
+    opacity: 0.2;
 }
 
 .nature-background img {
@@ -309,15 +305,15 @@ h1, h2, h3, h4 {
 .service-card:hover {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-10px);
-    border-color: var(--bright-turquoise);
-    box-shadow: 0 15px 40px rgba(32, 196, 181, 0.4);
+    border-color: var(--deep-sea-green);
+    box-shadow: 0 15px 40px rgba(32, 196, 181, 0.3);
 }
 
 .service-card h3 {
     color: var(--dark);
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-    font-family: var(--font-jugend);
+    font-family: var(--font-display);
     font-weight: 600;
 }
 
@@ -336,7 +332,7 @@ h1, h2, h3, h4 {
 .contact-intro {
     text-align: center;
     font-size: 1.3rem;
-    color: var(--deep-teal);
+    color: var(--deep-sea-green);
     margin-bottom: 4rem;
     max-width: 600px;
     margin-left: auto;
@@ -366,7 +362,7 @@ h1, h2, h3, h4 {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: var(--deep-teal);
+    color: var(--deep-sea-green);
     font-family: var(--font-body);
     font-size: 1rem;
     letter-spacing: 1px;
@@ -415,9 +411,9 @@ h1, h2, h3, h4 {
 }
 
 .submit-button:hover {
-    background: var(--bright-turquoise);
+    background: var(--deep-sea-green);
     transform: translateY(-2px);
-    box-shadow: 0 5px 20px rgba(32, 196, 181, 0.5);
+    box-shadow: 0 5px 20px rgba(32, 196, 181, 0.4);
 }
 
 .contact-info {
@@ -435,15 +431,15 @@ h1, h2, h3, h4 {
 }
 
 .info-card h3 {
-    color: var(--emerald-green);
+    color: var(--deep-sea-green);
     font-size: 1.8rem;
     margin-bottom: 1.5rem;
-    font-family: var(--font-jugend);
+    font-family: var(--font-display);
 }
 
 .info-card p {
     margin-bottom: 1rem;
-    color: var(--deep-teal);
+    color: var(--deep-sea-green);
 }
 
 .info-card a {
@@ -453,7 +449,7 @@ h1, h2, h3, h4 {
 }
 
 .info-card a:hover {
-    color: var(--bright-turquoise);
+    color: var(--deep-sea-green);
 }
 
 .social-links {
@@ -464,7 +460,7 @@ h1, h2, h3, h4 {
 }
 
 .social-link {
-    color: var(--deep-teal);
+    color: var(--deep-sea-green);
     text-decoration: none;
     font-family: var(--font-body);
     padding: 0.8rem 1.5rem;
@@ -483,7 +479,7 @@ h1, h2, h3, h4 {
 
 /* ===== FOOTER ===== */
 .footer {
-    background: linear-gradient(135deg, var(--deep-teal) 0%, var(--sea-green) 100%);
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
     color: var(--white);
     text-align: center;
     padding: 3rem 2rem;
@@ -491,12 +487,6 @@ h1, h2, h3, h4 {
 
 .footer p {
     margin-bottom: 0.5rem;
-}
-
-.footer-tagline {
-    font-style: italic;
-    color: var(--soft-apricot);
-    font-size: 0.95rem;
 }
 
 /* ===== ANIMATIONER ===== */
@@ -524,7 +514,7 @@ h1, h2, h3, h4 {
     }
     
     .hero-title {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
     
     .section-title {
@@ -544,7 +534,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 600px) {
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
     
     .section-title {
