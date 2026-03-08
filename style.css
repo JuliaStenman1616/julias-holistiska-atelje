@@ -312,12 +312,12 @@ h1, h2, h3, h4 {
 
 .service-card h3 {
     color: var(--dark);
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1rem;
-    font-family: var(--font-body);
+    font-family: var(--font-display);
     font-weight: 600;
-    text-transform: none;
-    letter-spacing: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .service-card p {
