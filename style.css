@@ -143,8 +143,9 @@ h1, h2, h3, h4 {
     min-height: 100vh;
     background-image: url('hero1.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -159,7 +160,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(255, 179, 128, 0.1) 100%);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 179, 128, 0.05) 100%);
 }
 
 .hero-content {
@@ -313,8 +314,10 @@ h1, h2, h3, h4 {
     color: var(--dark);
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    font-family: var(--font-display);
+    font-family: var(--font-body);
     font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .service-card p {
