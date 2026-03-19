@@ -137,7 +137,7 @@ h1, h2, h3, h4 {
     color: var(--sea-green);
 }
 
-/* ===== HERO SECTION ===== */
+/* ===== HERO SECTION - UTAN FILTER ===== */
 .hero {
     position: relative;
     min-height: 100vh;
@@ -160,7 +160,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(255, 179, 128, 0.05) 100%);
+    background: transparent;
 }
 
 .hero-content {
@@ -247,11 +247,11 @@ h1, h2, h3, h4 {
     color: var(--deep-sea-green);
 }
 
-/* ===== ATELJÉ SECTION ===== */
+/* ===== ATELJÉ SECTION - UTAN FILTER ===== */
 .studio-section {
     position: relative;
     padding: 8rem 2rem;
-    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    background: transparent;
     overflow: hidden;
 }
 
@@ -261,7 +261,7 @@ h1, h2, h3, h4 {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0.2;
+    opacity: 1;
 }
 
 .nature-background img {
@@ -289,9 +289,12 @@ h1, h2, h3, h4 {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
     margin-top: 4rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .service-card {
@@ -301,6 +304,9 @@ h1, h2, h3, h4 {
     border: 2px solid var(--sea-green);
     border-radius: 5px;
     transition: all 0.4s ease;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
 }
 
 .service-card:hover {
@@ -313,7 +319,7 @@ h1, h2, h3, h4 {
 .service-card h3 {
     color: var(--dark);
     font-size: 1.6rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-family: var(--font-display);
     font-weight: 600;
     text-transform: uppercase;
@@ -344,10 +350,29 @@ h1, h2, h3, h4 {
 
 .contact-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr;
     gap: 5rem;
     max-width: 1100px;
     margin: 0 auto;
+    align-items: start;
+}
+
+.contact-image {
+    position: relative;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    filter: none;
+}
+
+.contact-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .contact-form-wrapper {
@@ -480,6 +505,77 @@ h1, h2, h3, h4 {
     color: var(--white);
 }
 
+/* ===== BLOGG SECTION ===== */
+.blog-header {
+    position: relative;
+    min-height: 40vh;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+}
+
+.blog-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.blog-title {
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.blog-subtitle {
+    font-size: 1.5rem;
+    color: var(--soft-apricot);
+    font-style: italic;
+    font-family: var(--font-body);
+}
+
+.blog-section {
+    padding: 6rem 2rem;
+    background: var(--cream);
+}
+
+.blog-posts {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-post-placeholder {
+    background: var(--white);
+    padding: 4rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--sea-green);
+    text-align: center;
+}
+
+.blog-post-placeholder h2 {
+    color: var(--deep-sea-green);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-display);
+}
+
+.blog-post-placeholder p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+    line-height: 1.8;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: var(--deep-sea-green);
+    font-size: 1.1rem;
+}
+
 /* ===== FOOTER ===== */
 .footer {
     background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
@@ -533,6 +629,10 @@ h1, h2, h3, h4 {
     .nav-links {
         gap: 1.5rem;
     }
+    
+    .blog-title {
+        font-size: 3rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -542,6 +642,10 @@ h1, h2, h3, h4 {
     
     .section-title {
         font-size: 2rem;
+    }
+    
+    .blog-title {
+        font-size: 2.5rem;
     }
     
     body {
