@@ -137,30 +137,16 @@ h1, h2, h3, h4 {
     color: var(--sea-green);
 }
 
-/* ===== HERO SECTION - UTAN FILTER ===== */
+/* ===== HERO SECTION - FÄRGAD BAKGRUND ===== */
 .hero {
     position: relative;
-    min-height: 100vh;
-    background-image: url('hero1.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
+    min-height: 80vh;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: transparent;
 }
 
 .hero-content {
@@ -173,11 +159,19 @@ h1, h2, h3, h4 {
 .hero-title {
     font-size: 5rem;
     color: var(--white);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     font-weight: 400;
     letter-spacing: 5px;
-    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1.5s ease;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--soft-apricot);
+    font-style: italic;
+    font-family: var(--font-body);
+    animation: fadeInUp 1.5s ease 0.3s both;
 }
 
 /* ===== OM MIG SECTION ===== */
@@ -247,28 +241,26 @@ h1, h2, h3, h4 {
     color: var(--deep-sea-green);
 }
 
-/* ===== ATELJÉ SECTION - UTAN FILTER ===== */
+/* ===== ATELJÉ SECTION - FÄRGAD BAKGRUND ===== */
 .studio-section {
     position: relative;
     padding: 8rem 2rem;
-    background: transparent;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
     overflow: hidden;
 }
 
-.nature-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 1;
+.atelier-image-container {
+    text-align: center;
+    margin-bottom: 3rem;
 }
 
-.nature-background img {
+.atelier-image {
+    max-width: 400px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: none;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    border: 3px solid var(--apricot);
 }
 
 .studio-content {
@@ -312,8 +304,8 @@ h1, h2, h3, h4 {
 .service-card:hover {
     background: rgba(255, 255, 255, 1);
     transform: translateY(-10px);
-    border-color: var(--deep-sea-green);
-    box-shadow: 0 15px 40px rgba(32, 196, 181, 0.3);
+    border-color: var(--apricot);
+    box-shadow: 0 15px 40px rgba(255, 179, 128, 0.3);
 }
 
 .service-card h3 {
@@ -326,10 +318,47 @@ h1, h2, h3, h4 {
     letter-spacing: 2px;
 }
 
-.service-card p {
+/* ===== HERO ACCENT SECTION ===== */
+.hero-accent-section {
+    padding: 8rem 2rem;
+    background: var(--cream);
+}
+
+.hero-accent-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-accent-image {
+    position: relative;
+}
+
+.accent-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    border: 3px solid var(--sea-green);
+}
+
+.hero-accent-content {
+    padding: 2rem;
+}
+
+.accent-title {
+    font-size: 2.5rem;
+    color: var(--deep-sea-green);
+    margin-bottom: 1.5rem;
+}
+
+.accent-text {
+    font-size: 1.2rem;
     color: var(--dark);
-    font-size: 1rem;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 /* ===== KONTAKT SECTION ===== */
@@ -348,31 +377,12 @@ h1, h2, h3, h4 {
     margin-right: auto;
 }
 
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 5rem;
-    max-width: 1100px;
+.contact-content-wrapper-single {
+    max-width: 800px;
     margin: 0 auto;
-    align-items: start;
-}
-
-.contact-image {
-    position: relative;
-}
-
-.contact-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    filter: none;
-}
-
-.contact-content-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .contact-form-wrapper {
@@ -603,7 +613,8 @@ h1, h2, h3, h4 {
 /* ===== RESPONSIV DESIGN ===== */
 @media (max-width: 968px) {
     .about-grid,
-    .contact-grid {
+    .contact-grid,
+    .hero-accent-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
     }
@@ -618,6 +629,10 @@ h1, h2, h3, h4 {
     
     .section-title {
         font-size: 2.5rem;
+    }
+    
+    .atelier-image {
+        max-width: 300px;
     }
     
     .navbar {
@@ -644,6 +659,10 @@ h1, h2, h3, h4 {
         font-size: 2rem;
     }
     
+    .accent-title {
+        font-size: 2rem;
+    }
+    
     .blog-title {
         font-size: 2.5rem;
     }
@@ -655,5 +674,9 @@ h1, h2, h3, h4 {
     .contact-form-wrapper,
     .info-card {
         padding: 2rem 1.5rem;
+    }
+    
+    .atelier-image {
+        max-width: 100%;
     }
 }
