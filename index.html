@@ -24,6 +24,7 @@
     <header class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Julias Holistiska Ateljé</h1>
+            <p class="hero-subtitle">En plats för läkning, balans och inre frid</p>
         </div>
     </header>
 
@@ -45,11 +46,14 @@
 
     <!-- Ateljé Section -->
     <section id="atelje" class="studio-section">
-        <div class="nature-background">
-            <img src="atelje.jpg" alt="Ateljémiljö">
-        </div>
         <div class="container">
             <h2 class="section-title light">Ateljén</h2>
+            
+            <!-- Bild i mindre format -->
+            <div class="atelier-image-container">
+                <img src="atelje.jpg" alt="Ateljémiljö" class="atelier-image">
+            </div>
+            
             <div class="studio-content">
                 <div class="services-grid">
                     <a href="#tjanster" class="service-card">
@@ -63,50 +67,56 @@
         </div>
     </section>
 
+    <!-- Hero Bild Accent Section -->
+    <section class="hero-accent-section">
+        <div class="container">
+            <div class="hero-accent-grid">
+                <div class="hero-accent-image">
+                    <img src="hero1.jpg" alt="Inspiration" class="accent-img">
+                </div>
+                <div class="hero-accent-content">
+                    <h2 class="accent-title">Välkommen</h2>
+                    <p class="accent-text">Jag erbjuder en trygg och närvarande miljö där du får utrymme att läka, växa och återupptäcka din inre balans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Kontakt Section -->
     <section id="kontakt" class="contact-section">
         <div class="container">
             <h2 class="section-title">Kontakt</h2>
             
-            <div class="contact-grid">
-                <!-- Bild -->
-                <div class="contact-image">
-                    <img src="hero1.jpg" alt="Kontaktbild">
-                    <div class="image-decoration"></div>
+            <div class="contact-content-wrapper-single">
+                <!-- Kontaktformulär -->
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" action="mailto:julias.atelje@gmail.com" method="post" enctype="text/plain">
+                        <div class="form-group">
+                            <label for="name">Namn</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-post</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Meddelande</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Skicka meddelande</button>
+                    </form>
                 </div>
 
-                <!-- Kontaktinnehåll -->
-                <div class="contact-content-wrapper">
-                    <!-- Kontaktformulär -->
-                    <div class="contact-form-wrapper">
-                        <form class="contact-form" action="mailto:julias.atelje@gmail.com" method="post" enctype="text/plain">
-                            <div class="form-group">
-                                <label for="name">Namn</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">E-post</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Meddelande</label>
-                                <textarea id="message" name="message" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="submit-button">Skicka meddelande</button>
-                        </form>
+                <!-- Kontaktuppgifter -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Kontaktuppgifter</h3>
+                        <p><strong>E-post:</strong> <a href="mailto:julias.atelje@gmail.com">julias.atelje@gmail.com</a></p>
+                        <p><strong>Ort:</strong> Skellefteå, Sverige</p>
                     </div>
 
-                    <!-- Kontaktuppgifter -->
-                    <div class="contact-info">
-                        <div class="info-card">
-                            <h3>Kontaktuppgifter</h3>
-                            <p><strong>E-post:</strong> <a href="mailto:julias.atelje@gmail.com">julias.atelje@gmail.com</a></p>
-                            <p><strong>Ort:</strong> Skellefteå, Sverige</p>
-                        </div>
-
-                        <div class="social-links">
-                            <a href="#" class="social-link">Instagram</a>
-                        </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Instagram</a>
                     </div>
                 </div>
             </div>
