@@ -1,19 +1,264 @@
-/* ===== FÄRGUPPDATERINGAR FÖR RUBRIKER ===== */
-/* Solgul färg för specifika rubriker */
+/* =========================================
+   JULIAS HOLISTISKA ATELJÉ - STYLE.CSS
+   Uppdaterad: Färger, knappar, kontakt & mobil
+   ========================================= */
+
+/* 1. IMPORTERA TYPSNITT */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+/* 2. FÄRGPALETT & VARIABLER */
+:root {
+    --sea-green: #20c4b5;
+    --deep-sea-green: #1a9a8f;
+    --apricot: #ffb380;
+    --soft-apricot: #ffc9a3;
+    --coral: #FF6B6B;
+    --cream: #faf6ed;
+    --light-beige: #f0e8d8;
+    --gold: #d4af37;
+    --dark: #1a1a1a;
+    --white: #ffffff;
+    
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-display: 'Cinzel', serif;
+    --font-body: 'Cormorant Garamond', Georgia, serif;
+}
+
+/* 3. GLOBALA INSTÄLLNINGAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--dark);
+    background-color: var(--cream);
+    font-weight: 300;
+}
+
+/* 4. TYPOGRAFI */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.section-title {
+    font-size: 3.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--deep-sea-green);
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-title::after {
+    content: '✦';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--sea-green);
+    font-size: 1.5rem;
+}
+
+/* Guld-färg för specifika rubriker */
 .hero-title,
-.blog-title,
-.section-title.gold-text {
-    color: var(--gold) !important; /* Solgul: #d4af37 */
+.blog-title {
+    color: var(--gold) !important;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Alternativ: mjukare gul för "Kontakt" och "Om mig" */
+/* Mjuk guld/aprikos för "Om mig" och "Kontakt" */
 .section-title.soft-gold {
     color: var(--apricot);
 }
 
-/* ===== KNAPPAR & SERVICE-CARDS ===== */
-/* Uppdatera .service-card för aprikos-färg och rätt typsnitt */
+/* 5. NAVIGATION */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(26, 154, 143, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--apricot);
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.ankh {
+    color: var(--apricot);
+    margin-left: 5px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--sea-green);
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--sea-green);
+}
+
+/* 6. HERO SECTION */
+.hero {
+    position: relative;
+    min-height: 60vh;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    padding-top: 80px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 2rem;
+    max-width: 1000px;
+}
+
+.hero-title {
+    font-size: 6rem;
+    margin-bottom: 0;
+    font-weight: 400;
+    letter-spacing: 8px;
+    animation: fadeInUp 1.5s ease;
+}
+
+/* 7. OM MIG SECTION */
+.about-section {
+    padding: 8rem 2rem;
+    background: var(--cream);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    display: block;
+}
+
+.image-decoration {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    right: -20px;
+    bottom: 20px;
+    border: 2px solid var(--sea-green);
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.about-content {
+    padding: 2rem 0;
+}
+
+.intro-text {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--deep-sea-green);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    border-left: 3px solid var(--apricot);
+    padding-left: 1.5rem;
+}
+
+/* 8. ATELJÉ SECTION - KNAPPAR I APRIKOS */
+.studio-section {
+    position: relative;
+    padding: 8rem 2rem;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    overflow: hidden;
+}
+
+.studio-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    margin-top: 3rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .service-card {
     background: rgba(250, 246, 237, 0.95);
     padding: 2rem;
@@ -24,6 +269,22 @@
     display: block;
     cursor: pointer;
     text-align: center;
+}
+
+.service-card:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-10px);
+    border-color: var(--coral);
+    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.3);
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 3px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-card h3 {
@@ -41,15 +302,12 @@
     color: var(--coral);
 }
 
-.service-card:hover {
-    background: rgba(255, 255, 255, 1);
-    transform: translateY(-10px);
-    border-color: var(--coral);
-    box-shadow: 0 15px 40px rgba(255, 107, 107, 0.3);
+/* 9. KONTAKT-SEKTION MED BILD */
+.contact-section {
+    padding: 8rem 2rem;
+    background: linear-gradient(to bottom, var(--cream), var(--light-beige));
 }
 
-/* ===== KONTAKT-SEKTION: BILDLAYOUT ===== */
-/* Lägg till dessa för att få porträttbilden att fungera */
 .contact-grid-with-image {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -66,6 +324,65 @@
     align-items: center;
 }
 
+.info-card-large {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--sea-green);
+    width: 100%;
+    text-align: center;
+}
+
+.info-card-large h3 {
+    color: var(--deep-sea-green);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-display);
+}
+
+.info-card-large p {
+    margin-bottom: 1.5rem;
+    color: var(--deep-sea-green);
+    font-size: 1.1rem;
+}
+
+.info-card-large a {
+    color: var(--sea-green);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-card-large a:hover {
+    color: var(--coral);
+}
+
+.social-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: var(--deep-sea-green);
+    text-decoration: none;
+    font-family: var(--font-body);
+    padding: 0.8rem 1.5rem;
+    border: 2px solid var(--sea-green);
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+.social-link:hover {
+    background: var(--sea-green);
+    color: var(--white);
+}
+
+/* Porträttbild i kontakt */
 .contact-image-wrapper {
     position: relative;
     display: flex;
@@ -94,13 +411,107 @@
     opacity: 0.7;
 }
 
-/* ===== BLOGG: TA BORT SUBTITLE OM ÖNSKAT ===== */
-.blog-subtitle.hidden {
-    display: none;
+/* 10. BLOGG SECTION */
+.blog-header {
+    position: relative;
+    min-height: 40vh;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
 }
 
-/* ===== MOBILANPASSNING (RESPONSIVITET) ===== */
+.blog-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.blog-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.blog-subtitle {
+    font-size: 1.5rem;
+    color: var(--soft-apricot);
+    font-style: italic;
+    font-family: var(--font-body);
+}
+
+.blog-section {
+    padding: 6rem 2rem;
+    background: var(--cream);
+}
+
+.blog-posts {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-post-placeholder {
+    background: var(--white);
+    padding: 4rem 3rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid var(--sea-green);
+    text-align: center;
+}
+
+.blog-post-placeholder h2 {
+    color: var(--deep-sea-green);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: var(--font-display);
+}
+
+.blog-post-placeholder p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--dark);
+    line-height: 1.8;
+}
+
+.placeholder-text {
+    font-style: italic;
+    color: var(--deep-sea-green);
+    font-size: 1.1rem;
+}
+
+/* 11. FOOTER */
+.footer {
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 2rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem;
+}
+
+/* 12. ANIMATIONER */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 13. MOBILANPASSNING */
 @media (max-width: 968px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
     .contact-grid-with-image {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -108,7 +519,7 @@
     }
     
     .contact-image-wrapper {
-        order: -1; /* Bilden hamnar först på mobil */
+        order: -1;
     }
     
     .contact-portrait {
@@ -123,17 +534,25 @@
     .hero-title {
         font-size: 4rem;
     }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 600px) {
-    .contact-grid-with-image {
-        gap: 2rem;
-    }
-    
-    .contact-portrait {
-        max-width: 250px;
-    }
-    
     .hero-title {
         font-size: 3rem;
         letter-spacing: 5px;
@@ -143,11 +562,23 @@
         font-size: 2rem;
     }
     
-    .service-card h3 {
-        font-size: 1.4rem;
+    .blog-title {
+        font-size: 2.5rem;
+    }
+    
+    body {
+        font-size: 16px;
     }
     
     .info-card-large {
         padding: 2rem 1.5rem;
+    }
+    
+    .service-image {
+        height: 200px;
+    }
+    
+    .contact-portrait {
+        max-width: 250px;
     }
 }
