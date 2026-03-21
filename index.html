@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Julias Holistiska Ateljé</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - fixade länkar (inga mellanslag) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -20,26 +21,30 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - "Välkommen" i solgult -->
     <header class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Välkommen</h1>
         </div>
     </header>
 
-    <!-- Om mig Section -->
+    <!-- Om mig Section - rubrik i mjuk guld + bild -->
     <section id="om" class="about-section">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <h2 class="section-title">Om mig och ateljén</h2>
+                    <h2 class="section-title soft-gold">Om mig och ateljén</h2>
                     <p class="intro-text">Här kommer strax mer information om mig och min verksamhet, håll till godo!</p>
+                </div>
+                <div class="about-image">
+                    <img src="portrait.jpg" alt="Julia - Holistisk terapeut">
+                    <div class="image-decoration"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ateljé Section -->
+    <!-- Ateljé Section - knappar i aprikos + Cormorant Garamond -->
     <section id="atelje" class="studio-section">
         <div class="container">
             <h2 class="section-title light">Ateljén</h2>
@@ -58,10 +63,10 @@
         </div>
     </section>
 
-    <!-- Kontakt Section -->
+    <!-- Kontakt Section - rubrik i mjuk guld + porträttbild -->
     <section id="kontakt" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Kontakt</h2>
+            <h2 class="section-title soft-gold">Kontakt</h2>
             
             <div class="contact-grid-with-image">
                 <!-- Kontaktinfo -->
@@ -71,13 +76,12 @@
                         <p><strong>E-post:</strong> <a href="mailto:julias.atelje@gmail.com">julias.atelje@gmail.com</a></p>
                         <p><strong>Ort:</strong> Skellefteå, Sverige</p>
                     </div>
-
                     <div class="social-links">
                         <a href="#" class="social-link">Instagram</a>
                     </div>
                 </div>
 
-                <!-- Portraitbild -->
+                <!-- Porträttbild -->
                 <div class="contact-image-wrapper">
                     <img src="portrait.jpg" alt="Julia - Holistisk terapeut" class="contact-portrait">
                     <div class="image-decoration-contact"></div>
@@ -91,8 +95,8 @@
         <p>&copy; 2026 Julias Holistiska Ateljé. Alla rättigheter förbehållna.</p>
     </footer>
 
+    <!-- Smooth scrolling script -->
     <script>
-        // Smooth scrolling för navigationslänkar
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
