@@ -235,6 +235,10 @@ h1, h2, h3, h4 {
 
 /* 8. ATELJÉ SECTION - KNAPPAR I APRIKOS */
 .studio-section {
+   /* Solgul färg för Ateljé-rubrik */
+.section-title.gold-text {
+    color: var(--gold) !important;
+}
     position: relative;
     padding: 8rem 2rem;
     background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
