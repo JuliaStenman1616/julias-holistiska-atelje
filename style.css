@@ -190,7 +190,7 @@ h1, h2, h3, h4 {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.5fr; /* Bild först (vänster), text sen */
     gap: 5rem;
     align-items: center;
 }
@@ -393,9 +393,10 @@ h1, h2, h3, h4 {
     justify-content: center;
 }
 
+
 .contact-portrait {
     width: 100%;
-    max-width: 400px;
+    max-width: 200px; /* Var 400px, nu hälften = 200px */
     height: auto;
     border-radius: 5px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
