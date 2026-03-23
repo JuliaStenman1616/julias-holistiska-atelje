@@ -85,6 +85,11 @@ h1, h2, h3, h4 {
     color: var(--apricot);
 }
 
+/* Solgul färg för Ateljé-rubrik */
+.section-title.gold-text {
+    color: var(--gold) !important;
+}
+
 /* 5. NAVIGATION */
 .navbar {
     position: fixed;
@@ -191,12 +196,13 @@ h1, h2, h3, h4 {
 .about-grid {
     display: grid;
     grid-template-columns: 1fr 1.5fr; /* Bild först (vänster), text sen */
-    gap: 5rem;
-    align-items: center;
+    gap: 4rem;
+    align-items: start;
 }
 
 .about-image {
     position: relative;
+    padding-top: 3rem;
 }
 
 .about-image img {
@@ -205,6 +211,9 @@ h1, h2, h3, h4 {
     border-radius: 5px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     display: block;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .image-decoration {
@@ -220,7 +229,8 @@ h1, h2, h3, h4 {
 }
 
 .about-content {
-    padding: 2rem 0;
+    padding: 0;
+    margin-top: -1rem;
 }
 
 .intro-text {
@@ -235,10 +245,6 @@ h1, h2, h3, h4 {
 
 /* 8. ATELJÉ SECTION - KNAPPAR I APRIKOS */
 .studio-section {
-   /* Solgul färg för Ateljé-rubrik */
-.section-title.gold-text {
-    color: var(--gold) !important;
-}
     position: relative;
     padding: 8rem 2rem;
     background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
@@ -315,8 +321,8 @@ h1, h2, h3, h4 {
 .contact-grid-with-image {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    gap: 3rem;
+    align-items: start;
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -391,12 +397,13 @@ h1, h2, h3, h4 {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    padding-top: 2rem;
 }
-
 
 .contact-portrait {
     width: 100%;
-    max-width: 200px; /* Var 400px, nu hälften = 200px */
+    max-width: 300px;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
@@ -517,6 +524,19 @@ h1, h2, h3, h4 {
         gap: 3rem;
     }
     
+    .about-image {
+        padding-top: 0;
+        order: -1;
+    }
+    
+    .about-image img {
+        max-width: 100%;
+    }
+    
+    .about-content {
+        margin-top: 0;
+    }
+    
     .contact-grid-with-image {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -525,10 +545,11 @@ h1, h2, h3, h4 {
     
     .contact-image-wrapper {
         order: -1;
+        padding-top: 0;
     }
     
     .contact-portrait {
-        max-width: 300px;
+        max-width: 250px;
         margin: 0 auto;
     }
     
@@ -584,6 +605,6 @@ h1, h2, h3, h4 {
     }
     
     .contact-portrait {
-        max-width: 250px;
+        max-width: 200px;
     }
 }
