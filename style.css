@@ -1,6 +1,6 @@
 /* =========================================
    JULIAS HOLISTISKA ATELJÉ - STYLE.CSS
-   Uppdaterad: Färger, knappar, kontakt & mobil
+   Uppdaterad: Integrerad kontakt + justeringar
    ========================================= */
 
 /* 1. IMPORTERA TYPSNITT */
@@ -80,12 +80,7 @@ h1, h2, h3, h4 {
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Mjuk guld/aprikos för "Om mig" och "Kontakt" */
-.section-title.soft-gold {
-    color: var(--apricot);
-}
-
-/* Solgul färg för Ateljé-rubrik */
+/* Solgul färg för "Om mig" och "Kontakt" */
 .section-title.gold-text {
     color: var(--gold) !important;
 }
@@ -181,9 +176,9 @@ h1, h2, h3, h4 {
     animation: fadeInUp 1.5s ease;
 }
 
-/* 7. OM MIG SECTION */
+/* 7. OM MIG SECTION - FLYTTAD NER */
 .about-section {
-    padding: 8rem 2rem;
+    padding: 10rem 2rem 8rem; /* Ökade padding-top från 8rem till 10rem */
     background: var(--cream);
 }
 
@@ -312,69 +307,72 @@ h1, h2, h3, h4 {
     color: var(--coral);
 }
 
-/* 9. KONTAKT-SEKTION MED BILD */
+/* 9. KONTAKT-SEKTION - INTEGRERAD BILD OCH INFO */
 .contact-section {
     padding: 8rem 2rem;
     background: linear-gradient(to bottom, var(--cream), var(--light-beige));
 }
 
-.contact-grid-with-image {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-    align-items: start;
-    max-width: 1000px;
+/* Ny design: Kontakt-kort med bild och info integrerat */
+.contact-integrated-card {
+    max-width: 800px;
     margin: 0 auto;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-left: 5px solid var(--sea-green);
+    display: grid;
+    grid-template-columns: 300px 1fr;
 }
 
-.contact-info-wrapper {
+.contact-portrait-integrated {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.contact-info-integrated {
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    align-items: center;
+    justify-content: center;
 }
 
-.info-card-large {
-    background: var(--white);
-    padding: 3rem;
-    border-radius: 5px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-    border-left: 4px solid var(--sea-green);
-    width: 100%;
-    text-align: center;
-}
-
-.info-card-large h3 {
+.contact-info-integrated h3 {
     color: var(--deep-sea-green);
     font-size: 2rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     font-family: var(--font-display);
+    text-align: left;
 }
 
-.info-card-large p {
-    margin-bottom: 1.5rem;
+.contact-info-integrated p {
+    margin-bottom: 1.2rem;
     color: var(--deep-sea-green);
     font-size: 1.1rem;
+    text-align: left;
 }
 
-.info-card-large a {
+.contact-info-integrated a {
     color: var(--sea-green);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.info-card-large a:hover {
+.contact-info-integrated a:hover {
     color: var(--coral);
 }
 
-.social-links {
+.social-links-integrated {
     display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    margin-top: 1rem;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: flex-start;
 }
 
-.social-link {
+.social-link-integrated {
     color: var(--deep-sea-green);
     text-decoration: none;
     font-family: var(--font-body);
@@ -387,40 +385,9 @@ h1, h2, h3, h4 {
     font-size: 0.9rem;
 }
 
-.social-link:hover {
+.social-link-integrated:hover {
     background: var(--sea-green);
     color: var(--white);
-}
-
-/* Porträttbild i kontakt */
-.contact-image-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding-top: 2rem;
-}
-
-.contact-portrait {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    border: 3px solid var(--sea-green);
-    display: block;
-}
-
-.image-decoration-contact {
-    position: absolute;
-    top: -15px;
-    left: 15px;
-    right: -15px;
-    bottom: 15px;
-    border: 2px solid var(--apricot);
-    border-radius: 5px;
-    z-index: -1;
-    opacity: 0.7;
 }
 
 /* 10. BLOGG SECTION */
@@ -537,20 +504,26 @@ h1, h2, h3, h4 {
         margin-top: 0;
     }
     
-    .contact-grid-with-image {
+    /* Integrerat kontakt-kort på mobil */
+    .contact-integrated-card {
         grid-template-columns: 1fr;
-        gap: 3rem;
+    }
+    
+    .contact-portrait-integrated {
+        height: 300px;
+    }
+    
+    .contact-info-integrated {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-info-integrated h3,
+    .contact-info-integrated p {
         text-align: center;
     }
     
-    .contact-image-wrapper {
-        order: -1;
-        padding-top: 0;
-    }
-    
-    .contact-portrait {
-        max-width: 250px;
-        margin: 0 auto;
+    .social-links-integrated {
+        justify-content: center;
     }
     
     .services-grid {
@@ -596,15 +569,15 @@ h1, h2, h3, h4 {
         font-size: 16px;
     }
     
-    .info-card-large {
-        padding: 2rem 1.5rem;
-    }
-    
     .service-image {
         height: 200px;
     }
     
-    .contact-portrait {
-        max-width: 200px;
+    .contact-portrait-integrated {
+        height: 250px;
+    }
+    
+    .contact-info-integrated {
+        padding: 1.5rem 1rem;
     }
 }
