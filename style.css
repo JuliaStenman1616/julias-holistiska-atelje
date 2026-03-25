@@ -242,7 +242,48 @@ h1, h2, h3, h4 {
     border-left: 3px solid var(--apricot);
     padding-left: 1.5rem;
 }
+/* Ny CSS för brödtext i Om mig-sektionen */
+.about-text-content {
+    margin-top: 2rem;
+}
 
+.about-text-content p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.about-text-content .intro-text {
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--deep-sea-green);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    border-left: 3px solid var(--apricot);
+    padding-left: 1.5rem;
+}
+
+.about-text-content .coming-soon {
+    font-style: italic;
+    color: var(--deep-sea-green);
+    font-size: 1.1rem;
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--sea-green);
+}
+
+/* Mobilanpassning för texten */
+@media (max-width: 968px) {
+    .about-text-content p {
+        font-size: 1.1rem;
+    }
+    
+    .about-text-content .intro-text {
+        font-size: 1.2rem;
+    }
+}
 /* 8. ATELJÉ SECTION - KNAPPAR I APRIKOS */
 .studio-section {
     position: relative;
