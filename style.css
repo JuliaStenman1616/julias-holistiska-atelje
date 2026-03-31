@@ -1,6 +1,6 @@
 /* =========================================
    JULIAS HOLISTISKA ATELJÉ - STYLE.CSS
-   Uppdaterad: Bättre layout & läsbarhet
+   Uppdaterad: Bättre sidindelning & flow
    ========================================= */
 
 /* 1. IMPORTERA TYPSNITT */
@@ -153,10 +153,10 @@ h1, h2, h3, h4 {
     color: var(--sea-green);
 }
 
-/* 6. HERO SECTION */
+/* 6. HERO SECTION - MINDRE HÖJD FÖR BÄTTRE FLOW */
 .hero {
     position: relative;
-    min-height: 60vh;
+    min-height: 40vh; /* Minskad från 60vh till 40vh */
     background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
     display: flex;
     align-items: center;
@@ -169,21 +169,21 @@ h1, h2, h3, h4 {
 .hero-content {
     position: relative;
     z-index: 2;
-    padding: 4rem 2rem;
+    padding: 3rem 2rem;
     max-width: 1000px;
 }
 
 .hero-title {
-    font-size: 6rem;
+    font-size: 5rem; /* Minskad från 6rem */
     margin-bottom: 0;
     font-weight: 400;
     letter-spacing: 8px;
     animation: fadeInUp 1.5s ease;
 }
 
-/* 7. OM MIG SECTION */
+/* 7. OM MIG SECTION - MINDRE PADDING FÖR BÄTTRE FLOW */
 .about-section {
-    padding: 12rem 2rem 10rem; /* Ökat utrymme före och efter */
+    padding: 6rem 2rem 8rem; /* Minskad från 12rem/10rem till 6rem/8rem */
     background: var(--cream);
 }
 
@@ -195,8 +195,8 @@ h1, h2, h3, h4 {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Bild först (vänster), text sen */
-    gap: 5rem; /* Ökat gap för bättre luft */
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem; /* Minskad från 5rem för tightare layout */
     align-items: start;
 }
 
@@ -232,23 +232,23 @@ h1, h2, h3, h4 {
     padding: 0;
 }
 
-/* Brödtext i Om mig-sektionen - ÖKAD LÄSBARHET */
+/* Brödtext i Om mig-sektionen */
 .about-text-content {
     margin-top: 2rem;
 }
 
 .about-text-content p {
-    font-size: 1.25rem; /* Ökad från 1.15rem för bättre läsbarhet */
-    line-height: 2; /* Ökat radavstånd för bättre läsbarhet */
+    font-size: 1.25rem;
+    line-height: 2;
     color: var(--dark);
-    margin-bottom: 2rem; /* Mer utrymme mellan stycken */
+    margin-bottom: 2rem;
     text-align: left;
 }
 
 /* 8. ATELJÉ SECTION */
 .studio-section {
     position: relative;
-    padding: 10rem 2rem; /* Ökat utrymme */
+    padding: 8rem 2rem; /* Minskad från 10rem */
     background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
     overflow: hidden;
 }
@@ -316,11 +316,10 @@ h1, h2, h3, h4 {
 
 /* 9. KONTAKT-SEKTION */
 .contact-section {
-    padding: 10rem 2rem; /* Ökat utrymme */
+    padding: 8rem 2rem; /* Minskad från 10rem */
     background: linear-gradient(to bottom, var(--cream), var(--light-beige));
 }
 
-/* Enkelt kontakt-kort utan bild */
 .contact-simple-card {
     max-width: 600px;
     margin: 0 auto;
@@ -466,7 +465,7 @@ h1, h2, h3, h4 {
     }
     
     .about-text-content p {
-        font-size: 1.15rem; /* Lite mindre på mobil men fortfarande läsbar */
+        font-size: 1.15rem;
     }
     
     .services-grid {
@@ -474,7 +473,7 @@ h1, h2, h3, h4 {
     }
     
     .hero-title {
-        font-size: 4rem;
+        font-size: 3.5rem; /* Minskad för mobil */
     }
     
     .section-title {
@@ -495,8 +494,12 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 600px) {
+    .hero {
+        min-height: 35vh; /* Ännu mindre på små skärmar */
+    }
+    
     .hero-title {
-        font-size: 3rem;
+        font-size: 2.5rem;
         letter-spacing: 5px;
     }
     
