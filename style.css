@@ -75,7 +75,8 @@ h1, h2, h3, h4 {
 
 /* Solgul färg för specifika rubriker */
 .hero-title,
-.blog-title {
+.blog-title,
+.services-title {
     color: var(--gold) !important;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
 }
@@ -424,7 +425,84 @@ h1, h2, h3, h4 {
     font-size: 1.1rem;
 }
 
-/* 11. FOOTER */
+/* 11. TJÄNSTER-SIDA - NYA STYLER */
+.services-header {
+    position: relative;
+    min-height: 40vh;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+}
+
+.services-header-content {
+    position: relative;
+    z-index: 2;
+}
+
+.services-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+    letter-spacing: 5px;
+}
+
+.services-info-section {
+    padding: 6rem 2rem;
+    background: var(--cream);
+}
+
+.services-info-card {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    padding: 4rem 3rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--sea-green);
+    text-align: center;
+}
+
+.services-intro {
+    font-size: 1.3rem;
+    line-height: 2;
+    color: var(--dark);
+    margin-bottom: 2rem;
+    font-family: var(--font-body);
+}
+
+.services-contact-invite {
+    font-size: 1.2rem;
+    color: var(--deep-sea-green);
+    margin-bottom: 3rem;
+    font-style: italic;
+    font-family: var(--font-body);
+}
+
+.contact-button {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
+    color: var(--white);
+    padding: 1.2rem 3rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(32, 196, 181, 0.3);
+}
+
+.contact-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(32, 196, 181, 0.4);
+    background: linear-gradient(135deg, var(--sea-green) 0%, var(--deep-sea-green) 100%);
+}
+
+/* 12. FOOTER */
 .footer {
     background: linear-gradient(135deg, var(--deep-sea-green) 0%, var(--sea-green) 100%);
     color: var(--white);
@@ -436,7 +514,7 @@ h1, h2, h3, h4 {
     margin-bottom: 0.5rem;
 }
 
-/* 12. ANIMATIONER */
+/* 13. ANIMATIONER */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -448,7 +526,7 @@ h1, h2, h3, h4 {
     }
 }
 
-/* 13. MOBILANPASSNING */
+/* 14. MOBILANPASSNING */
 @media (max-width: 968px) {
     .about-grid {
         grid-template-columns: 1fr;
@@ -480,6 +558,11 @@ h1, h2, h3, h4 {
         font-size: 2.5rem;
     }
     
+    .services-title,
+    .blog-title {
+        font-size: 2.5rem;
+    }
+    
     .navbar {
         flex-direction: column;
         gap: 1rem;
@@ -490,6 +573,14 @@ h1, h2, h3, h4 {
         gap: 1.5rem;
         flex-wrap: wrap;
         justify-content: center;
+    }
+    
+    .services-info-card {
+        padding: 3rem 2rem;
+    }
+    
+    .services-intro {
+        font-size: 1.2rem;
     }
 }
 
@@ -507,15 +598,17 @@ h1, h2, h3, h4 {
         font-size: 2rem;
     }
     
-    .blog-title {
-        font-size: 2.5rem;
+    .blog-title,
+    .services-title {
+        font-size: 2rem;
     }
     
     body {
         font-size: 16px;
     }
     
-    .contact-simple-card {
+    .contact-simple-card,
+    .services-info-card {
         padding: 2rem 1.5rem;
     }
     
@@ -525,5 +618,10 @@ h1, h2, h3, h4 {
     
     .about-text-content p {
         font-size: 1.1rem;
+    }
+    
+    .contact-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
     }
 }
